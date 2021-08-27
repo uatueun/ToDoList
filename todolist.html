@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList–輕量級代辦事項列表</title>
+    <link rel="stylesheet" href="css/todolist.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/todolist.js"></script>
+</head>
+
+<body>
+    <header>
+        <section>
+            <form action="javascript:postaction()" id="form">
+                <label for="title">ToDoList</label>
+                <input type="text" id="title" name="title" placeholder="輸入文字後按'Enter'來添加ToDo" required="required" autocomplete="off" />
+            </form>
+        </section>
+    </header>
+    <section>
+        <h2>正在進行 <span id="todocount"></span></h2>
+        <ol id="todolist" class="demo-box">
+
+        </ol>
+        <h2>已經完成 <span id="donecount"></span></h2>
+        <ul id="donelist">
+
+        </ul>
+    </section>
+    <footer>
+        Copyright &copy; 2021 todolist.tw
+    </footer>
+
+</body>
+
+</html>

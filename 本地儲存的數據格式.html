@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        var todolist = [{
+                title: '我今天吃一頭牛',
+                done: false
+            }, {
+                title: '我今天學習jQuery',
+                done: false
+            }, ]
+            // localStorage.setItem('todo', todolist)
+            // 1.本地儲存裡面只能存儲字符串的數據格式 把我們的數組對象轉換為字符串格式JSON.stringify()
+        localStorage.setItem('todo', JSON.stringify(todolist))
+        var data = localStorage.getItem('todo')
+            // console.log(typeof data);
+            // console.log(data[0].title);
+
+        // 2. 獲取本地存儲的數據 我們需要把裡面的字符串數據傳換為 物件格式 JSON.parse()
+        data = JSON.parse(data);
+        console.log(data);
+    </script>
+</body>
+
+</html>
